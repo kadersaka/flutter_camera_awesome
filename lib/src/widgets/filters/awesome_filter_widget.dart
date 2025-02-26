@@ -109,7 +109,15 @@ class _AwesomeFilterWidgetState extends State<AwesomeFilterWidget> {
                   ? null
                   : 0,
               right: 20,
-              child: AwesomeFilterButton(state: widget.state),
+              child: AwesomeFilterButton(
+                  state: widget.state,
+                iconBuilder: (){
+                  return AwesomeCircleWidget.icon(
+                    icon: Icons.tune,
+                    theme: theme,
+                  );
+                },
+              ),
             ),
           ],
         ),
